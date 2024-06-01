@@ -1,0 +1,27 @@
+apiVersion: v2
+name: noisecharts
+description: helm chart for noisecharts
+type: application
+version: 0.0.1
+appVersion: "1.16.0"
+dependencies: 
+  - name: noisequery
+    version: 0.0.1
+    repository: https://github.com/omkarugale7/Noise-Query
+  
+  - name: noisecomments
+    version: 0.0.1
+    repository: https://github.com/omkarugale7/Noise-Comments
+  
+  - name: noiseposts
+    version: 0.0.1
+    repository: https://github.com/omkarugale7/Noise-Posts
+  
+  - name: noiseevents
+    version: 0.0.1
+    repository: https://github.com/omkarugale7/Noise-events
+  
+  - name: noiseclient
+    version: 0.0.1
+    repository: https://github.com/omkarugale7/Noise-Client
+  

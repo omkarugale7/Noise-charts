@@ -1,0 +1,75 @@
+noisecomments:
+  appname: noisecomments
+  replicaCount: 2
+  image: 
+    repository: 590183800387.dkr.ecr.ap-south-1.amazonaws.com
+    repositoryPath: noisecomments
+    tag: 1bfe15ae53e76ca12dd546c5535f1073cc4d9c97
+    pullPolicy: always
+  service:
+    port: 80
+    targetPort: 4001
+    type: ClusterIP
+  ingress:
+    path: /comments
+    pathType: exact
+noiseclient:
+  appname: noiseclients
+  replicaCount: 2
+  image: 
+    repository: 590183800387.dkr.ecr.ap-south-1.amazonaws.com
+    repositoryPath: noiseclients
+    tag: 663d689333dda914af3b19a8af474e51b49dd9c3	
+    pullPolicy: always
+  service:
+    port: 80
+    targetPort: 4000
+    type: ClusterIP
+  ingress:
+    path: /clients
+    pathType: exact
+noiseevents:
+  appname: noiseevents
+  replicaCount: 2
+  image: 
+    repository: 590183800387.dkr.ecr.ap-south-1.amazonaws.com
+    repositoryPath: noiseevents
+    tag: 169ba3ae5d056628f051c550a1b2fbb67631430f
+    pullPolicy: always
+  service:
+    port: 80
+    targetPort: 4003
+    type: ClusterIP
+  ingress:
+    path: /events
+    pathType: exact
+noiseposts:
+  appname: noiseposts
+  replicaCount: 2
+  image: 
+    repository: 590183800387.dkr.ecr.ap-south-1.amazonaws.com
+    repositoryPath: noiseposts
+    tag: e7096bdd68863d0ca0e3f8cc029066a6d86f886d	
+    pullPolicy: always
+  service:
+    port: 80
+    targetPort: 4000
+    type: ClusterIP
+  ingress:
+    path: /posts
+    pathType: exact
+noisequery:
+  appname: noisequery
+  replicaCount: 2
+  image: 
+    repository: 590183800387.dkr.ecr.ap-south-1.amazonaws.com
+    repositoryPath: noisequery
+    tag: 383fae63e8a749d61c96487ddde98afe25bdd0eb
+    pullPolicy: always
+  service:
+    port: 80
+    targetPort: 4002
+    type: ClusterIP
+  ingress:
+    path: /query
+    pathType: exact
